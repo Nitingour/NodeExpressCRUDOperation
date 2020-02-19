@@ -1,0 +1,27 @@
+
+<h1>Welcome {{uid}}</h1>
+  <h3>New Employee Form</h3>
+
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{msg}}</strong>
+  </div>
+
+
+<form action="insertEmp" method="post">
+  <div class="form-group">
+    <label for="email">EmpID:</label>
+    <input type="text" class="form-control" id="email" placeholder="Enter empid" name="eid">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Name:</label>
+    <input type="text" class="form-control" id="pwd" placeholder="Enter name" name="ename">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Salary:</label>
+    <input type="text" class="form-control" id="pwd" placeholder="Enter Salary" name="esalary">
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>

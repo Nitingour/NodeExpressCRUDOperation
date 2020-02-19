@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">EMS</a>
+    </div>
+    <ul class="nav navbar-nav">
+      {{#if uid}}
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="/newempform">Create Emp</a></li>
+      <li><a href="/viewemps">View All Emps</a></li>
+      {{/if}}
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {{#if uid}}
+      <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      {{else}}
+      <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+{{{body}}}
+</div>
+</body>
+</html>
