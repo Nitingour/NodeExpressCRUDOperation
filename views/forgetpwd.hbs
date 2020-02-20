@@ -11,7 +11,7 @@
 <body>
 <div class="container">
 
-<h2>Login Form</h2>
+<h2>Forget Password Form</h2>
    {{#if msg}}
   <div class="alert alert-danger alert-dismissible fade in">
      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -19,18 +19,15 @@
    </div>
 {{/if}}
 
-  <form action="/loginCheck" method="post">
+  <form action="/getPwd" method="post">
     <div class="form-group">
-      <label for="email">LoginID:</label>
-      <input type="text" class="form-control" id="email" placeholder="Enter loginid" name="loginid">
+      <label for="email">Enter Registered Email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter loginid" name="email" >
     </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
-    </div>
-    <button type="submit" class="btn btn-default">Login</button>
+
+    <button type="submit" class="btn btn-default">Get Password</button>
   </form>
 </div>
-   <a href='/forgetpwd'>Forget Password</a>
+
 </body>
 </html>

@@ -1,6 +1,11 @@
 <h1>Welcome {{uid}}</h1>
 
-<input type="text" value={{uid}}>
+{{#if msg}}
+<div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{msg}}</strong>
+</div>
+{{/if}}
 <table class='table table-hover'>
 <tr><th>EID</th><th>Name</th><th>Salary</th></tr>
 {{#each data}}
@@ -8,6 +13,7 @@
             <td>{{this.eid}}</td>
               <td>{{this.ename}}</td>
                 <td>{{this.salary}}</td>
+    <td><a href="/deleteEmp?eid={{this.eid}}" onclick="return confirm('Do you really want ot delete?')">Delete</a></td>
       </tr>
 {{/each}}
 </table>
